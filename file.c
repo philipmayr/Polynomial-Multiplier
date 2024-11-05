@@ -11,7 +11,7 @@ typedef struct node
 
 node * create_node(int index, int coefficient)
 {
-    node * new_node = (node *) malloc(sizeof(node));
+    node * new_node = (node *) malloc(sizeof (node));
     
     new_node -> index = index;
     new_node -> coefficient = coefficient;
@@ -42,7 +42,7 @@ node * copy_list(node * head_node)
 {
     if (head_node == NULL) return NULL;
     
-    node * new_node = (node *) malloc(sizeof(node));
+    node * new_node = (node *) malloc(sizeof (node));
     
     new_node -> index = head_node -> index;
     new_node -> coefficient = head_node -> coefficient;
@@ -140,7 +140,7 @@ node * multiply_two_polynomials(node * first_polynomial, node * second_polynomia
 
 node * exponentiate_polynomial(node * polynomial, int index)
 {
-    node ** dynamic_array = (node **) malloc((index + 1) * sizeof(node));
+    node ** dynamic_array = (node **) malloc((index + 1) * sizeof (node));
     
     dynamic_array[0] = polynomial;
         
